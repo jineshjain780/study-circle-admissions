@@ -155,7 +155,7 @@ export default function LeadForm({ onSuccess }: LeadFormProps) {
 
     try {
       const response = await fetch(
-  "https://script.google.com/macros/s/AKfycbzuYCw1rHpSLLi8IaOLKaxJY4sUijpQ4kcyr4wR5wBtC85Dmn5cA2HZjXAoyh-phVmQ/exec",
+  "https://script.google.com/macros/s/AKfycbx6_UH_1pqL7roPsqO6QiFL-3A01Ck6tK2bICwRx1ye7-0GmNhbgLzhpkI2t4KB8iPT/exec",
   {
     method: "POST",
     headers: {

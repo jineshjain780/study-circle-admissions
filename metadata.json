@@ -1,0 +1,6 @@
+{
+  "name": "Study Circle Admissions",
+  "description": "Premium mobile-first admission inquiry landing page for Study Circle Coaching Institute in Surat, Gujarat, featuring a progressive form and automated Google Sheets sync.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

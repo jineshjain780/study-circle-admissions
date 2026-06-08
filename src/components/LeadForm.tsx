@@ -154,18 +154,31 @@ export default function LeadForm({ onSuccess }: LeadFormProps) {
     setError("");
 
     try {
-      const response = await fetch("/api/inquiries", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          mobile,
-          standard,
-          board: (standard === "9th" || standard === "10th") ? board : null,
-          stream: (standard === "11th" || standard === "12th") ? stream : null,
-          centers
-        })
-      });
+      const response = await fetch(
+  "https://script.google.com/macros/s/AKfycbzuYCw1rHpSLLi8IaOLKaxJY4sUijpQ4kcyr4wR5wBtC85Dmn5cA2HZjXAoyh-phVmQ/exec",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "text/plain;charset=utf-8",
+    },
+    body: JSON.stringify({
+      id: Date.now(),
+      timestamp: new Date().toISOString(),
+      name,
+      mobile,
+      standard,
+      board:
+        standard === "9th" || standard === "10th"
+          ? board
+          : null,
+      stream:
+        standard === "11th" || standard === "12th"
+          ? stream
+          : null,
+      centers,
+    }),
+  }
+);
 
       if (!response.ok) {
         throw new Error("Failed to submit inquiry. Please try again.");
